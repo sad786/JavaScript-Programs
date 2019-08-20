@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" language="javascript">
+            function bigImage(obj)
+            {
+                height = obj.height
+                width = obj.width
+                while(height<=500&&width<=500)
+                {
+                    window.setInterval(null,10000)
+                    obj.style.height = height+10+"px"
+                    obj.style.width= width+10+"px"
+                    height = height+10
+                    width = width+10
+                }
+            }
+            function small_Image(obj)
+            {
+                let height = obj.height
+                let width = obj.width
+                while(height>=100&&width>=100)
+                {
+                    obj.style.width = width-10+"px"
+                    obj.style.height = height-10+"px"
+                    height = height-10
+                    width  = width-10
+                    window.setInterval(null,5000)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is Image of human</p>
+        <img src="res/appu.jpg" width="100px" height="100px" onmouseout="small_Image(this)" onmouseover ="bigImage(this)">
+    </body>
+</html>
