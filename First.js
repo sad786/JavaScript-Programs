@@ -1,8 +1,7 @@
-var http = require("http")
-
-http.createServer(function (request,response){
-    response.writeHead(200,{'Content-Type':'text/plain'})
-    response.end("Hello World I am Node.js")
-}).listen(8081)
-
-console.log("server is running at port no 8081")
+var _this = this;
+;
+var customer = {
+    name: 'Alien',
+    age: 101,
+    getInfo: function () { return "Your name is " + name + " and your age is " + _this.age; }
+};
